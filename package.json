@@ -1,0 +1,24 @@
+{
+  "name": "les-petits-plats",
+  "version": "1.0.0",
+  "description": "site de recettes de cuisine",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch App/scss/style.scss:App/css/style.css -w --style compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laetitiaCP/Les-petits-plats.git"
+  },
+  "author": "Laetitia Cendra-Prodanic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laetitiaCP/Les-petits-plats/issues"
+  },
+  "homepage": "https://github.com/laetitiaCP/Les-petits-plats#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.5"
+  }
+}

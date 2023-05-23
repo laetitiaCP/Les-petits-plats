@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  &__logo{
+    align-self: center;
+    margin-top: 42px;
+  };
+  &__title{
+    align-self: center;
+    color: $colorLogo;
+    font-size: 36px;
+    font-weight: 700;
+  };
+}
+
+#search {
+  margin-top: 17px;
+}
+
+#search-input {
+    background-color: $colorGrey;
+    border: 1px solid $colorGrey;
+}
+#search-input::placeholder {
+    color: #000000;
+    opacity: 0.25;
+}
+#search-span {
+    background-color: $colorGrey;
+}
+

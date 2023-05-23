@@ -1,0 +1,50 @@
+.card-head {
+  display: flex;
+  margin-bottom: 20px;
+  & i {
+    position: absolute;
+    right: 90px;
+    font-size: $fontSizeCardHeader;
+  }
+  & span {
+    position: absolute;
+    right: 20px;
+    font-weight: $fontBold;
+    font-size: $fontSizeCardHeader;
+  }
+}
+
+.card-title {
+  font-family: $principalFont;
+  font-size: $fontSizeCardHeader;
+  width: 60%;
+  margin-right: 0;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: row;
+}
+
+#card-list-ingredients {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: $fontSizeCardBody;
+  font-weight: $fontBold;
+  line-height: 14.4px;
+  width: 50%;
+  margin-right: 18px;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  font-family: $fontTextCard;
+  font-size: $fontSizeCardBody;
+  width: 171px;
+  height: 70px;
+  overflow: hidden;
+  line-height: 12px;
+}
+
