@@ -1,0 +1,8 @@
+@mixin changeColorInput($bgColor, $borderColor, $textColor) {
+  background: $bgColor;
+  border: $borderColor;
+  color: $textColor;
+  &::placeholder {
+    color: $textColor;
+  }
+}

@@ -30,6 +30,7 @@ function recipesFactory(data) {
         locCardListIngredients.setAttribute("id", "card-list-ingredients");
         ingredients.forEach( locIngredient => {
             const { ingredient, quantity, unit } = locIngredient;
+            ingredientsSet.add(ingredient);
             const locCardIngredient = document.createElement("li");
             if (unit && quantity) {
                 locCardIngredient.textContent = ingredient + ": " + quantity + " " + unit;
@@ -41,7 +42,10 @@ function recipesFactory(data) {
 
             locCardListIngredients.appendChild(locCardIngredient);
         })
-
+        appliancesSet.add(appliance);
+        ustensils.forEach(ustensil => {
+            ustensilsSet.add(ustensil);
+        });
         const locCardText = document.createElement("p");
         locCardText.setAttribute("class", "card-text");
         locCardText.textContent = description;

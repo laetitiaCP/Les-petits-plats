@@ -1,0 +1,30 @@
+#filter {
+  margin-top: 25px;
+}
+
+#filter__tags {
+  & span {
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+}
+
+.tags-ingredients {
+  background-color: $colorIngredients;
+
+}
+
+.tags-appliances {
+  background-color: $colorAppliance;
+}
+
+.tags-ustensils {
+  background-color: $colorUstensils;
+}
+
+.bi-x-circle {
+  color: white;
+  margin-left: 10px;
+}

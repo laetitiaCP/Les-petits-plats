@@ -18,10 +18,10 @@ function getData() {
                 {
                     "ingredient": "Crème de coco",
                     "quantity": 2,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 },
                 {
-                    "ingredient": "Sucre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": 30,
                     "unit": "grammes"
                 },
@@ -61,7 +61,7 @@ function getData() {
                     "quantity": 5
                 },
                 {
-                    "ingredient": "Lait de Coco",
+                    "ingredient": "Lait de coco",
                     "quantity": 100,
                     "unit": "ml"
                 }
@@ -85,7 +85,7 @@ function getData() {
                     "unit": "ml"
                 },
                 {
-                    "ingredient": "Coulis de tomate",
+                    "ingredient": "Coulis de tomates",
                     "quantity": 25,
                     "unit": "cl"
                 },
@@ -98,9 +98,9 @@ function getData() {
                     "quantity": 1
                 },
                 {
-                    "ingredient": "Huile d'olive",
+                    "ingredient": "Huile d'olives",
                     "quantity": 1,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 }
             ],
             "time": 80,
@@ -166,7 +166,7 @@ function getData() {
                 {
                     "ingredient": "Crème fraîche",
                     "quantity": 2,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 },
                 {
                     "ingredient": "gruyère râpé",
@@ -176,7 +176,7 @@ function getData() {
                 {
                     "ingredient": "Moutarde de Dijon",
                     "quantity": 1,
-                    "unite": "cuillères à soupe"
+                    "unite": "Cuillères à soupe"
                 }
             ],
             "time": 45,
@@ -207,7 +207,7 @@ function getData() {
                     "unit": "cl"
                 },
                 {
-                    "ingredient": "Sucre en Poudre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": 100,
                     "unit": "grammes"
                 },
@@ -280,12 +280,12 @@ function getData() {
                     "quantity": 2
                 },
                 {
-                    "ingredient": "Sucre en Poudre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": "110",
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "farine",
+                    "ingredient": "Farine",
                     "quantity": 90,
                     "unit": "grammes"
                 }
@@ -317,7 +317,7 @@ function getData() {
                     "ingredient": "Vinaigre Balsamic"
                 },
                 {
-                    "ingredient": "Huile d'olive"
+                    "ingredient": "Huile d'olives"
                 },
                 {
                     "ingredient": "Basilic"
@@ -361,14 +361,14 @@ function getData() {
             "time": 60,
             "description": "Commencer par cuire les pommes de terre dans l'eau bouillante. Puis épluchez les et coupez les en rondelles. Émincer les oignons puis les faire dorer dans du beurre. Ajouter le jambon fumé coupé en en morceaux ainsi que les pommes de terres. Salez, poivrez à votre gout ( et celui de vos convives ) Laissez cuisiner durant environ 10 minutes puis ajouter le vin blanc. Après 5 minutes, mettre le tout dans un plat à gratin. Coupez le reblochon, soit en tranches, soit le couper en 2 dans le sens de l'épaisseur et recouvrir les pommes de terre. Cuire au four (environ 220°) durant 25 minutes. C'est prêt !",
             "appliance": "Four",
-            "ustensils": ["plat à gratin", "couteau", "Économe"]
+            "ustensils": ["plat à gratin", "couteau", "économe"]
         }, {
             "id": 11,
             "name": "Salade tomate, mozzarella et pommes",
             "servings": 4,
             "ingredients": [
                 {
-                    "ingredient": "Tomates cerises",
+                    "ingredient": "Tomates cerise",
                     "quantity": 250,
                     "unit": "grammes"
                 },
@@ -383,7 +383,7 @@ function getData() {
                     "unit": "tranches"
                 },
                 {
-                    "ingredient": "Pommes",
+                    "ingredient": "Pomme",
                     "quantity": 1
                 },
                 {
@@ -411,7 +411,7 @@ function getData() {
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "Pommes",
+                    "ingredient": "Pomme",
                     "quantity": 8
                 },
                 {
@@ -456,7 +456,7 @@ function getData() {
                     "unit": "cuillère à soupe"
                 },
                 {
-                    "ingredient": "huile d'olive",
+                    "ingredient": "Huile d'olives",
                     "quantity": 2,
                     "unit": "cuillère à soupe"
                 }
@@ -571,7 +571,7 @@ function getData() {
                     "unit": "tiges"
                 },
                 {
-                    "ingredient": "huile d'olives",
+                    "ingredient": "Huile d'olives",
                     "quantity": 2,
                     "unit": "cuillère à soupe"
                 }
@@ -598,7 +598,7 @@ function getData() {
                 {
                     "ingredient": "Jus de citron",
                     "quantity": 1,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 },
                 {
                     "ingredient": "Glaçons",
@@ -677,7 +677,7 @@ function getData() {
             "servings": 5,
             "ingredients": [
                 {
-                    "ingredient": "Tagliatelles",
+                    "ingredient": "Tagliatelle",
                     "quantity": 500,
                     "unit": "grammes"
                 },
@@ -697,9 +697,9 @@ function getData() {
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "huile d'olive",
+                    "ingredient": "Huile d'olives",
                     "quantity": 1,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 }
             ],
             "time": 30,
@@ -722,7 +722,7 @@ function getData() {
                     "quantity": 2
                 },
                 {
-                    "ingredient": "Coulis de tomate",
+                    "ingredient": "Coulis de tomates",
                     "quantity": 300,
                     "unit": "grammes"
                 },
@@ -739,13 +739,13 @@ function getData() {
                 {
                     "ingredient": "Crème fraîche",
                     "quantity": 1,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 }
             ],
             "time": 30,
             "description": "Cuisiner la viande hachée dans une poêle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oignons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomates à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraîche à la viande hachée. Servir.",
             "appliance": "Casserole",
-            "ustensils": ["Cuillère en bois", "louche", "couteau"]
+            "ustensils": ["cuillère en bois", "louche", "couteau"]
         },
         {
             "id": 22,
@@ -772,7 +772,7 @@ function getData() {
                     "quantity": 4
                 },
                 {
-                    "ingredient": "Sucre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": 150,
                     "unit": "grammes"
                 }
@@ -807,7 +807,7 @@ function getData() {
                     "quantity": 3
                 },
                 {
-                    "ingredient": "Crème Fraîche",
+                    "ingredient": "Crème fraîche",
                     "quantity": 20,
                     "unit": "cl"
                 },
@@ -853,7 +853,7 @@ function getData() {
                 {
                     "ingredient": "Mayonnaise",
                     "quantity": 2,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 }
             ],
             "time": 40,
@@ -867,7 +867,7 @@ function getData() {
             "servings": 4,
             "ingredients": [
                 {
-                    "ingredient": "Sucre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": 100,
                     "unit": "grammes"
                 },
@@ -1016,7 +1016,7 @@ function getData() {
                     "quantity": 2
                 },
                 {
-                    "ingredient": "Huile d'olive"
+                    "ingredient": "Huile d'olives"
                 },
                 {
                     "ingredient": "Paprika"
@@ -1084,7 +1084,7 @@ function getData() {
             "time": 60,
             "description": "Découper en cubes les carottes et pommes de terre. Faire revenir dans du beurre. Ajouter les lardons, une fois les lardons dorés, ajouter un grand verre d'eau. Ajouter les petit poids et les haricots verts ( tous deux pré cuits ). Ajouter Sel, poivre, thyms et laurier",
             "appliance": "Poêle",
-            "ustensils": ["Couteau", "économe"]
+            "ustensils": ["couteau", "économe"]
         },
         {
             "id": 32,
@@ -1149,12 +1149,12 @@ function getData() {
                 {
                     "ingredient": "Fromage blanc",
                     "quantity": 4,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 },
                 {
                     "ingredient": "Jus de citron",
                     "quantity": 1,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 }
             ],
             "time": 5,
@@ -1178,7 +1178,7 @@ function getData() {
                     "unit": "cl"
                 },
                 {
-                    "ingredient": "Huile d'olive"
+                    "ingredient": "Huile d'olives"
                 },
                 {
                     "ingredient": "Orange",
@@ -1211,7 +1211,7 @@ function getData() {
                 {
                     "ingredient": "Crème fraîche",
                     "quantity": 2,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 },
                 {
                     "ingredient": "Cumin",
@@ -1260,7 +1260,7 @@ function getData() {
                 {
                     "ingredient": "Maïzena",
                     "quantity": 1,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 }
             ],
             "time": 35,
@@ -1306,7 +1306,7 @@ function getData() {
             "time": 60,
             "description": "Couper les courgettes dans le sens de la longueur. Vider les courgette dans un saladier. Réserver.Faire revenir la chair des courgettes dans 25cl d'huile d'olive. Ajouter l'oignon puis la viande hachée. Mettre la farce dans les courgettes. Ajouter le coulis de tomates. Mettre au four pendant 30 minutes. Avant la fin de la cuisson ajouter le fromage râpé",
             "appliance": "Four",
-            "ustensils": ["couteau", "cuillère en bois", "Poêle à frire"]
+            "ustensils": ["couteau", "cuillère en bois", "poêle à frire"]
         },
         {
             "id": 38,
@@ -1463,7 +1463,7 @@ function getData() {
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "Sucre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": 150,
                     "unit": "grammes"
                 },
@@ -1501,7 +1501,7 @@ function getData() {
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "Sucre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": 100,
                     "unit": "grammes"
                 },
@@ -1511,7 +1511,7 @@ function getData() {
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "farine",
+                    "ingredient": "Farine",
                     "quantity": 40,
                     "unit": "grammes"
                 }
@@ -1541,7 +1541,7 @@ function getData() {
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "Sucre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": 80,
                     "unit": "grammes"
                 }
@@ -1562,7 +1562,7 @@ function getData() {
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "Sucre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": 150,
                     "unit": "grammes"
                 },
@@ -1607,12 +1607,12 @@ function getData() {
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "Sucre",
+                    "ingredient": "Sucre en poudre",
                     "quantity": 100,
                     "unit": "grammes"
                 },
                 {
-                    "ingredient": "Crème Fraîche",
+                    "ingredient": "Crème fraîche",
                     "quantity": 20,
                     "unit": "cl"
                 }
@@ -1632,7 +1632,7 @@ function getData() {
                     "quantity": 1
                 },
                 {
-                    "ingredient": "Tomates pelées",
+                    "ingredient": "Tomate pelées",
                     "quantity": 1,
                     "unit": "boites"
                 },
@@ -1663,11 +1663,11 @@ function getData() {
             "servings": 4,
             "ingredients": [
                 {
-                    "ingredient": "Bananes",
+                    "ingredient": "Banane",
                     "quantity": 2
                 },
                 {
-                    "ingredient": "Kiwis",
+                    "ingredient": "Kiwi",
                     "quantity": 3
                 },
                 {
@@ -1682,7 +1682,7 @@ function getData() {
                 {
                     "ingredient": "Miel",
                     "quantity": 2,
-                    "unit": "cuillères à soupe"
+                    "unit": "Cuillères à soupe"
                 }
             ],
             "time": 0,
@@ -1705,7 +1705,7 @@ function getData() {
                     "quantity": 6
                 },
                 {
-                    "ingredient": "Poudre d'amendes",
+                    "ingredient": "Poudre d'amandes",
                     "quantity": 500,
                     "unit": "grammes"
                 },

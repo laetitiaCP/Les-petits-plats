@@ -1,0 +1,74 @@
+.filter {
+  &__buttons {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 82px;
+  }
+}
+
+.btn {
+  display: flex;
+  margin-right: 20px;
+  & .bi-chevron-down, .bi-chevron-up {
+    color: white;
+  }
+  & .bi-chevron-up {
+    display: none;
+  }
+}
+
+.btn-primary {
+  width: 170px;
+  @include button-variant($colorIngredients, $colorIngredients);
+  & .form-control {
+    @include changeColorInput($colorIngredients, $colorIngredients, white);
+  }
+}
+
+.btn-secondary {
+  width: 170px;
+  @include button-variant($colorAppliance, $colorAppliance);
+  & .form-control {
+    @include changeColorInput($colorAppliance, $colorAppliance, white);
+  }
+}
+
+.btn-success {
+  width: 170px;
+  @include button-variant($colorUstensils, $colorUstensils);
+  & .form-control {
+    @include changeColorInput($colorUstensils, $colorUstensils, white);
+  }
+}
+
+.tags-list {
+  position: absolute;
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+  flex-wrap: wrap;
+  z-index: 1;
+  max-height: 397px;
+  width: 667px;
+}
+
+.list-options-ingredients, .list-options-appliances, .list-options-ustensils {
+  width: 30%;
+  color: white;
+  cursor: pointer;
+}
+
+#ingredients-list{
+  display: none;
+  background-color: $colorIngredients;
+}
+
+#appliances-list{
+  display: none;
+  background-color: $colorAppliance;
+}
+
+#ustensils-list{
+  display: none;
+  background-color: $colorUstensils;
+}
