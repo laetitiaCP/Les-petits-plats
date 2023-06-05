@@ -7,6 +7,8 @@ const ustensilElement = document.getElementById("ustensils-list");
 const chevronDownButtons = document.getElementsByClassName("bi-chevron-down");
 const chevronUpButtons = document.getElementsByClassName("bi-chevron-up")
 const listElements = [ingredientElement, applianceElement, ustensilElement];
+const searchRecipe = document.getElementById("search-input");
+const recipeSection = document.getElementById("recipe-section");
 
 function displayRecipesDetails(recipes){
     const recipeSection = document.getElementById("recipe-section");
@@ -30,7 +32,17 @@ function displayListFilters(parSet, parIdHTML) {
 }
 
 function init() {
-    const recipes = getData();
+    let recipes = getData();
+    let locItemEntered;
+    searchRecipe.addEventListener("input", e => {
+        locItemEntered = e.target.value.toLowerCase();
+        if(locItemEntered.length >= 3) {
+            console.log(locItemEntered.length);
+            recipeSection.remove();
+            displayRecipesDetails(research(locItemEntered));
+        }
+    })
+
     displayRecipesDetails(recipes);
     displayListFilters(ingredientsSet, ingredientElement);
     displayListFilters(appliancesSet, applianceElement);
