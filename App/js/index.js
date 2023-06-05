@@ -37,12 +37,13 @@ function init() {
     searchRecipe.addEventListener("input", e => {
         locItemEntered = e.target.value.toLowerCase();
         if(locItemEntered.length >= 3) {
-            console.log(locItemEntered.length);
-            recipeSection.remove();
-            displayRecipesDetails(research(locItemEntered));
+            removeAllChildNodes(recipeSection);
+            research(locItemEntered);
+        } else {
+            removeAllChildNodes(recipeSection);
+            displayRecipesDetails(recipes);
         }
     })
-
     displayRecipesDetails(recipes);
     displayListFilters(ingredientsSet, ingredientElement);
     displayListFilters(appliancesSet, applianceElement);
