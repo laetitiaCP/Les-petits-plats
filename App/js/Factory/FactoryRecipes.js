@@ -8,7 +8,7 @@ function recipesFactory(data) {
         locCard.setAttribute("class","card h-100");
         const locCardImage = document.createElement("img");
         locCardImage.setAttribute("class", "card-img-top");
-        locCardImage.setAttribute("src","logo/rectangle.png");
+        locCardImage.setAttribute("src","Images/rectangle.png");
         locCardImage.setAttribute("alt", "image représentant la recette");
         const locCardBody = document.createElement("div");
         locCardBody.setAttribute("class","card-body");

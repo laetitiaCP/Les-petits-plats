@@ -1,8 +1,8 @@
-@import "variables_overrides.scss";
-@import "mixins";
+@import "2_Utils/variables_overrides";
+@import "2_Utils/mixins";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
-@import "page.scss";
-@import "card.scss";
-@import "tags.scss";
-@import "buttons.scss";
+@import "5_Pages/page";
+@import "3_Layout/card";
+@import "3_Layout/tags";
+@import "4_Composants/buttons";
