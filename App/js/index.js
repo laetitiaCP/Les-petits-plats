@@ -3,7 +3,7 @@ const ingredientsSet = new Set();
 const appliancesSet = new Set();
 const ustensilsSet = new Set();
 const ingredientElement = document.getElementById("ingredients-list");
-const applianceElement = document.getElementById("appliances-list");
+const applianceElement = document.getElementById("appliance-list");
 const ustensilElement = document.getElementById("ustensils-list");
 const chevronDownButtons = document.getElementsByClassName("bi-chevron-down");
 const chevronUpButtons = document.getElementsByClassName("bi-chevron-up")
@@ -56,9 +56,16 @@ function initListener() {
             research(locItemEntered);
             updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
         } else {
-            removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
-            displayRecipesDetails(recipes);
-            updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
+            if(_filterTags.children.length === 0 ) {
+                removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
+                displayRecipesDetails(recipes);
+                updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
+            } else {
+                for(let i=0; i<_filterTags.children.length; i++) {
+                    justSearchWithTags(_filterTags.children[i].textContent);
+                }
+            }
+
         }
     });
     researchInTags(inputIngredients, ingredientsSet, ingredientElement);
