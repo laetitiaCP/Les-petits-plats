@@ -1,4 +1,3 @@
-const recipes = getData();
 const ingredientsSet = new Set();
 const appliancesSet = new Set();
 const ustensilsSet = new Set();
@@ -33,37 +32,26 @@ function displayListFilters(parSet, parIdHTML) {
 }
 
 function init() {
-
-    removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
-    displayRecipesDetails(recipes);
-    updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
-
-    for (let i=0; i < listElements.length; i++) {
-        buttonOnclickListOpened(chevronDownButtons[i], chevronUpButtons[i], listElements[i]);
-        buttonOnclickListClosed(chevronUpButtons[i], chevronDownButtons[i], listElements[i]);
-    }
-
-    initListener();
-
-}
-
-function initListener() {
+    let recipes = getData();
     let locItemEntered;
     searchRecipe.addEventListener("input", e => {
         locItemEntered = e.target.value.toLowerCase();
         if(locItemEntered.length >= 3) {
-            removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
+            removeAllChildNodes(recipeSection);
             research(locItemEntered);
-            updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
         } else {
-            removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
+            removeAllChildNodes(recipeSection);
             displayRecipesDetails(recipes);
-            updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
         }
-    });
-    researchInTags(inputIngredients, ingredientsSet, ingredientElement);
-    researchInTags(inputAppliances, appliancesSet, applianceElement);
-    researchInTags(inputUstensils, ustensilsSet, ustensilElement);
+    })
+    displayRecipesDetails(recipes);
+    displayListFilters(ingredientsSet, ingredientElement);
+    displayListFilters(appliancesSet, applianceElement);
+    displayListFilters(ustensilsSet, ustensilElement);
+    for (let i=0; i < listElements.length; i++) {
+        buttonOnclickListOpened(chevronDownButtons[i], chevronUpButtons[i], listElements[i]);
+        buttonOnclickListClosed(chevronUpButtons[i], chevronDownButtons[i], listElements[i]);
+    }
 }
 
 init();
