@@ -46,7 +46,7 @@ function research(parEntry) {
             recipesSorted.add(recipes[i]);
         }
     }
-    console.log(recipesSorted)
+    console.log(recipesSorted.size)
     if(recipesSorted.size === 0) {
         return noResult();
     } else {
