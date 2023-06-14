@@ -53,41 +53,15 @@ function justSearchWithTags(parElement, parType) {
  * @param parTextElement
  */
 function researchOnlyWithTags(parElement, parType) {
-    tagsSetForSearch.clear();
+
 
     let listTags = _filterTags.children;
     let isContained = false;
     let areAllWordsContained = false;
 
-    /*for(let element of recipes) {
-        if(parType === "ingredients") {
-            for (let i = 0; i < element.ingredients.length; i++) {
-                if ((element.ingredients[i].ingredient).toLowerCase().includes(parElement.textContent.toLowerCase())) {
-                    isContained = true;
-                    tagsSetForSearch.add(element);
-                    break;
-                }
-            }
-        }
-        if(parType === "appliance") {
-            console.log((element.appliance).toLowerCase())
-            console.log(parElement.textContent)
-            if ((element.appliance).toLowerCase().includes(parElement.textContent.toLowerCase())){
-                isContained = true;
-                tagsSetForSearch.add(element);
-                continue;
-            }
-        }
-        if(parType === "ustensils") {
-            for (let i = 0; i < element.ustensils.length; i++) {
-                if ((element.ustensils[i]).toLowerCase().includes(parElement.textContent.toLowerCase())) {
-                    isContained = true;
-                    tagsSetForSearch.add(element);
-                    break;
-                }
-            }
-        }
-    }*/
+    tagsSetForSearch.clear();
+
+    console.log(tagsSetForSearch)
 
     for(let element of recipes) {
         isContained = false;
@@ -107,13 +81,11 @@ function researchOnlyWithTags(parElement, parType) {
                         break;
                     }
                 }
-                continue;
             }
             if (locType === "appliance") {
                 if (element.appliance.toLowerCase().includes(locTextTag)) {
                     isContained = true;
                     areAllWordsContained &= true;
-                    continue;
                 }
             }
             if(locType === "ustensils") {
@@ -124,19 +96,18 @@ function researchOnlyWithTags(parElement, parType) {
                         break;
                     }
                 }
-                continue;
-            } else {
-                if (false === isContained) {
-                    isContained = false;
-                    areAllWordsContained = false;
-                    break;
-                }
             }
+            if (false === isContained) {
+                areAllWordsContained = false;
+                break;
+            }
+
         }
         if(areAllWordsContained) {
             tagsSetForSearch.add(element);
         }
     }
+    console.log(tagsSetForSearch)
     return displayRecipesDetails(tagsSetForSearch);
 }
 
