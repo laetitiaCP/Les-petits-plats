@@ -1,3 +1,4 @@
+const recipes = getData();
 const ingredientsSet = new Set();
 const appliancesSet = new Set();
 const ustensilsSet = new Set();
@@ -32,26 +33,37 @@ function displayListFilters(parSet, parIdHTML) {
 }
 
 function init() {
-    let recipes = getData();
-    let locItemEntered;
-    searchRecipe.addEventListener("input", e => {
-        locItemEntered = e.target.value.toLowerCase();
-        if(locItemEntered.length >= 3) {
-            removeAllChildNodes(recipeSection);
-            research(locItemEntered);
-        } else {
-            removeAllChildNodes(recipeSection);
-            displayRecipesDetails(recipes);
-        }
-    })
+
+    removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
     displayRecipesDetails(recipes);
-    displayListFilters(ingredientsSet, ingredientElement);
-    displayListFilters(appliancesSet, applianceElement);
-    displayListFilters(ustensilsSet, ustensilElement);
+    updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
+
     for (let i=0; i < listElements.length; i++) {
         buttonOnclickListOpened(chevronDownButtons[i], chevronUpButtons[i], listElements[i]);
         buttonOnclickListClosed(chevronUpButtons[i], chevronDownButtons[i], listElements[i]);
     }
+
+    initListener();
+
+}
+
+function initListener() {
+    let locItemEntered;
+    searchRecipe.addEventListener("input", e => {
+        locItemEntered = e.target.value.toLowerCase();
+        if(locItemEntered.length >= 3) {
+            removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
+            research(locItemEntered);
+            updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
+        } else {
+            removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
+            displayRecipesDetails(recipes);
+            updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
+        }
+    });
+    researchInTags(inputIngredients, ingredientsSet, ingredientElement);
+    researchInTags(inputAppliances, appliancesSet, applianceElement);
+    researchInTags(inputUstensils, ustensilsSet, ustensilElement);
 }
 
 init();
