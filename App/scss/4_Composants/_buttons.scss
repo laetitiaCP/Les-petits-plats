@@ -52,7 +52,7 @@
   width: 667px;
 }
 
-.list-options-ingredients, .list-options-appliances, .list-options-ustensils {
+.list-options-ingredients, .list-options-appliance, .list-options-ustensils {
   width: 30%;
   color: white;
   cursor: pointer;
@@ -63,7 +63,7 @@
   background-color: $colorIngredients;
 }
 
-#appliances-list{
+#appliance-list{
   display: none;
   background-color: $colorAppliance;
 }
