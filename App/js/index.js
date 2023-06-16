@@ -32,21 +32,6 @@ function displayListFilters(parSet, parIdHTML) {
     })
 }
 
-function init() {
-
-    removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
-    displayRecipesDetails(recipes);
-    updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
-
-    for (let i=0; i < listElements.length; i++) {
-        buttonOnclickListOpened(chevronDownButtons[i], chevronUpButtons[i], listElements[i]);
-        buttonOnclickListClosed(chevronUpButtons[i], chevronDownButtons[i], listElements[i]);
-    }
-
-    initListener();
-
-}
-
 function initListener() {
     let locItemEntered;
     searchRecipe.addEventListener("input", e => {
@@ -71,6 +56,33 @@ function initListener() {
     researchInTags(inputIngredients, ingredientsSet, ingredientElement);
     researchInTags(inputAppliances, appliancesSet, applianceElement);
     researchInTags(inputUstensils, ustensilsSet, ustensilElement);
+
+    document.body.addEventListener("click", closeListsInputs);
+}
+
+function closeListsInputs(e) {
+    e.target.classList.forEach(element => {
+        if (element !== "form-control" && element !== "bi" && element !== "bi-chevron-down"){
+            for (let i=0; i<listElements.length; i++) {
+                closeLists(chevronUpButtons[i], chevronDownButtons[i], listElements[i]);
+            }
+        }
+    })
+}
+
+function init() {
+
+    removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
+    displayRecipesDetails(recipes);
+    updateAllInputs(ingredientsSet, ingredientElement, appliancesSet, applianceElement, ustensilsSet, ustensilElement);
+
+    for (let i=0; i < listElements.length; i++) {
+        buttonOnclickListOpened(chevronDownButtons[i], chevronUpButtons[i], listElements[i], i);
+        buttonOnclickListClosed(chevronUpButtons[i], chevronDownButtons[i], listElements[i]);
+    }
+
+    initListener();
+
 }
 
 init();
