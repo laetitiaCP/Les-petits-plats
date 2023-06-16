@@ -68,5 +68,6 @@ function recipesFactory(data) {
         return locDivCol;
 
     }
+
     return {getRecipeCard};
 }
