@@ -25,7 +25,7 @@ function addFilterTags(parElement){
 
     _filterTags.appendChild(locTag);
 
-    searchWithAddedTags(parElement);
+    searchWithAddedTags();
 }
 
 function researchInTags(parInput, parSet, parElementHtml) {
@@ -38,7 +38,6 @@ function researchInTags(parInput, parSet, parElementHtml) {
                 updatedSet.add(value);
             }
         });
-
         removeAllChildNodes(parElementHtml);
         displayListFilters(updatedSet, parElementHtml);
     });
@@ -48,8 +47,7 @@ function researchInTags(parInput, parSet, parElementHtml) {
  * Recherche les recettes qui contiennent le ou les tags avec ou sans la barre de recherche principale
  * @param parElement
  */
-function searchWithAddedTags(parElement) {
-    let locTextElement = parElement.textContent.toLowerCase();
+function searchWithAddedTags() {
     let locValuePrincipalInput = document.getElementById("search-input").value;
     removeAllSectionsResearch(recipeSection, ingredientElement, applianceElement, ustensilElement);
     researchWithTags(locValuePrincipalInput);
@@ -125,8 +123,10 @@ function researchWithTags(parPrincipalInput) {
 
     if(parPrincipalInput !== "") {
         recipesListFilteredTags = recipesListFilteredTags.filter(value => {
-            return recipedSorted.has(value);
-        })
+            if (recipedSorted.includes(value)) {
+                return true;
+            }
+        });
     }
     return displayRecipesDetails(recipesListFilteredTags);
 }

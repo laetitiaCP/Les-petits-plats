@@ -1,48 +1,32 @@
-const recipedSorted = new Set();
+let recipedSorted = [];
 function research(parEntry) {
-    recipedSorted.clear();
     let locWordsToSearch = parEntry.split(" ");
+    locWordsToSearch = locWordsToSearch.filter( word => {
+        if (word === "") {
+            return false;
+        }
+        return true;
+    });
+    recipedSorted = recipes.filter( value => {
+        let locRemainingWords = locWordsToSearch.filter( word => {
 
-    let isContained = false;
-    let areAllWordsContained = false;
-
-    mapRecettes.forEach( (value, key, map) => {
-        isContained = false;
-        areAllWordsContained = true;
-
-        locWordsToSearch.forEach( word => {
-            isContained = false;
-            if(word === ""){
-                return;
-            }
-            if(key.toLowerCase().includes(word)){
-                isContained = true;
-                areAllWordsContained &= true;
-                return;
+            if(value.name.toLowerCase().includes(String(word))){
+                return true;
             } else {
                 value.ingredients.forEach(ingredient => {
-                    if(String(ingredient).toLowerCase().includes(word)) {
-                        isContained = true;
-                        areAllWordsContained &= true;
-                        return;
+                    if(String(ingredient).toLowerCase().includes(String(word))) {
+                        return true;
                     }
                 })
-                if(false === isContained) {
-                    if(value.description.toLowerCase().includes(word)){
-                        isContained = true;
-                        areAllWordsContained &= true;
-                    } else {
-                        isContained = false;
-                        areAllWordsContained = false;
-                        return;
-                    }
+                if(value.description.toLowerCase().includes(String(word))){
+                     return true;
                 }
-            }
 
+                return false;
+            }
         });
-        if(areAllWordsContained) {
-            recipedSorted.add(value);
-        }
+        return locRemainingWords.length === locWordsToSearch.length;
+
     });
 
     if(recipedSorted.size === 0) {
