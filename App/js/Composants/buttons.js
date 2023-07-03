@@ -1,14 +1,15 @@
 function buttonOnclickListOpened(parElementToListen, parElementIcon, parElementToDisplay, parIndex) {
-    const locElementToDisplayParent = parElementToListen.parentElement;
+    let locElementToDisplayChild = searchBrotherDom(parElementToDisplay)
+    let locParentParElementToListen = parElementToListen.parentElement;
 
     parElementToListen.addEventListener("click", function () {
         if (parElementToDisplay.style.display !== "flex") {
             parElementToListen.style.display = "none";
             parElementToDisplay.style.display = "flex";
             parElementIcon.style.display = "inline-block";
-            locElementToDisplayParent.style.width = "667px";
-            locElementToDisplayParent.style.borderBottomRightRadius = "0";
-            locElementToDisplayParent.style.borderBottomLeftRadius = "0";
+            locElementToDisplayChild.style.width = "617px";
+            locParentParElementToListen.style.borderBottomRightRadius = "0";
+            locElementToDisplayChild.style.borderBottomLeftRadius = "0";
         }
         for (let i= 0; i < listElements.length; i++) {
             if (i !== parIndex) {
@@ -25,14 +26,15 @@ function buttonOnclickListClosed(parElementToClose, parElementIcon, parElementTo
 }
 
 function closeLists(parElementToClose, parElementIcon, parElementToDisplay) {
-    const locElementToDisplayParent = parElementToClose.parentElement;
+    let locElementToDisplayChild = searchBrotherDom(parElementToDisplay)
+    let locParentParElementToClose = parElementIcon.parentElement;
     if (parElementToDisplay.style.display === "flex") {
         parElementToClose.style.display = "none";
         parElementToDisplay.style.display = "none";
         parElementIcon.style.display = "inline-block";
-        locElementToDisplayParent.style.width = "170px";
-        locElementToDisplayParent.style.borderBottomRightRadius = "5%";
-        locElementToDisplayParent.style.borderBottomLeftRadius = "5%";
+        locElementToDisplayChild.style.width = "170px";
+        locElementToDisplayChild.style.borderBottomLeftRadius = "0.375rem";
+        locParentParElementToClose.style.borderBottomRightRadius = "0.375rem";
     }
 }
 

@@ -21,46 +21,46 @@
                         <input id="search-input" type="text" class="form-control form-control-lg" placeholder="Rechercher une recette"
                                aria-label="Rechercher une recette" aria-describedby="search-span" />
                         <span class="input-group-text border-0" id="search-span">
-                            <img class="bi bi-search" src="App/Images/search.svg"></img>
+                            <img class="bi bi-search" src="App/Images/search.svg"/>
                         </span>
                     </div>
                 </div>
-                <section id="filter">
+                <div id="filter">
                     <div id="filter__tags">
 
                     </div>
                     <div>
                         <div class="filter__buttons">
-                            <div>
+                            <form>
+                                <input id="input-ingredients" class="form-control" type="text" placeholder="Ingrédients" aria-label="choix ingrédients">
                                 <button id="btn-ingredient" type="button" class="btn btn-primary btn-lg">
-                                    <input id="input-ingredients" class="form-control" type="text" placeholder="Ingrédients" aria-label="choix ingrédients">
-                                    <img class="bi bi-chevron-down" src="App/Images/chevron-down.svg" />
-                                    <img class="bi bi-chevron-up" src="App/Images/chevron-up.svg"/>
+                                    <img class="bi bi-chevron-down" src="App/Images/chevron-down.svg" alt="chevron bas" />
+                                    <img class="bi bi-chevron-up" src="App/Images/chevron-up.svg" alt="chevron haut"/>
                                 </button>
                                 <ul id="ingredients-list" role="listbox" class="tags-list">
                                 </ul>
-                            </div>
-                            <div>
+                            </form>
+                            <form>
+                                <input id="input-appliances" class="form-control" type="text" placeholder="Appareils" aria-label="choix appareils">
                                 <button id="btn-appliance" type="button" class="btn btn-secondary btn-lg">
-                                    <input id="input-appliances" class="form-control" type="text" placeholder="Appareils" aria-label="choix appareils">
-                                    <img class="bi bi-chevron-down" src="App/Images/chevron-down.svg"/>
-                                    <img class="bi bi-chevron-up" src="App/Images/chevron-up.svg"/>
+                                    <img class="bi bi-chevron-down" src="App/Images/chevron-down.svg" alt="chevron bas"/>
+                                    <img class="bi bi-chevron-up" src="App/Images/chevron-up.svg"alt="chevron haut"/>
                                 </button>
                                 <ul id="appliances-list" role="listbox" class="tags-list">
                                 </ul>
-                            </div>
-                            <div>
+                            </form>
+                            <form>
+                                <input id="input-ustensils" class="form-control" type="text" placeholder="Ustensiles" aria-label="choix ustensiles">
                                 <button id="btn-ustensil" type="button" class="btn btn-success btn-lg">
-                                    <input id="input-ustensils" class="form-control" type="text" placeholder="Ustensiles" aria-label="choix ustensiles">
-                                    <img class="bi bi-chevron-down" src="App/Images/chevron-down.svg" />
-                                    <img class="bi bi-chevron-up" src="App/Images/chevron-up.svg" />
+                                    <img class="bi bi-chevron-down" src="App/Images/chevron-down.svg" alt="chevron bas"/>
+                                    <img class="bi bi-chevron-up" src="App/Images/chevron-up.svg" alt="chevron haut"/>
                                 </button>
                                 <ul id="ustensils-list" role="listbox" class="tags-list">
                                 </ul>
-                            </div>
+                            </form>
                         </div>
                     </div>
-                </section>
+                </div>
                 <div id="recipe-section" class="row row-cols-1 row-cols-md-3 g-4">
                 </div>
             </div>

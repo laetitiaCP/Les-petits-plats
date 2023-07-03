@@ -3,39 +3,59 @@
     display: flex;
     margin-top: 20px;
     margin-bottom: 82px;
+
+    & form {
+      display: flex;
+      flex-direction: row;
+      & input {
+        width: 203px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        }
+      & input::placeholder {
+        color: white;
+      }
+    }
   }
+}
+
+#input-ingredients {
+  background-color: $colorIngredients;
+  border: solid 1px $colorIngredients;
+  color: white;
+}
+#input-appliances {
+  background-color: $colorAppliance;
+  border: solid 1px $colorAppliance;
+  color: white;
+}
+#input-ustensils {
+  background-color: $colorUstensils;
+  border: solid 1px $colorUstensils;
+  color: white;
 }
 
 .btn {
   display: flex;
   margin-right: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   & .bi-chevron-up {
     display: none;
   }
 }
 
 .btn-primary {
-  width: 170px;
   @include button-variant($colorIngredients, $colorIngredients);
-  & .form-control {
-    @include changeColorInput($colorIngredients, $colorIngredients, white);
-  }
+  pointer-events: visible;
 }
 
 .btn-secondary {
-  width: 170px;
   @include button-variant($colorAppliance, $colorAppliance);
-  & .form-control {
-    @include changeColorInput($colorAppliance, $colorAppliance, white);
-  }
 }
 
 .btn-success {
-  width: 170px;
   @include button-variant($colorUstensils, $colorUstensils);
-  & .form-control {
-    @include changeColorInput($colorUstensils, $colorUstensils, white);
-  }
 }
 
 .tags-list {
@@ -47,6 +67,7 @@
   z-index: 1;
   max-height: 397px;
   width: 667px;
+  top: 268px;
 }
 
 .list-options-ingredients, .list-options-appliances, .list-options-ustensils {

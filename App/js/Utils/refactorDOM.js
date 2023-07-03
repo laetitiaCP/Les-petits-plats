@@ -19,3 +19,11 @@ function updateAllInputs(parFirstSet, parFirstElement, parSecondSet, parSecondEl
     displayListFilters(parSecondSet, parSecondElement);
     displayListFilters(parThirdSet, parThirdElement);
 }
+
+function searchBrotherDom(parStartingElement) {
+    let locParentElement = parStartingElement.parentElement;
+    let locChildren = locParentElement.children;
+    let locChildInput = locChildren[0];
+
+    return locChildInput;
+}
