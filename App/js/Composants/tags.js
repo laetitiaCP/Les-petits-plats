@@ -14,8 +14,9 @@ function addFilterTags(parElement){
     locTag.setAttribute("class", locClassName);
     locTag.textContent = parElement.textContent;
 
-    let locCrossIcon = document.createElement("i");
-    locCrossIcon.setAttribute("class", "bi bi-x-circle");
+    let locCrossIcon = document.createElement("img");
+    locCrossIcon.setAttribute("id", "x-circle");
+    locCrossIcon.setAttribute("src", "App/Images/x-circle.svg");
     locCrossIcon.onclick = () => {
         locTag.remove();
         deleteTag();

@@ -9,9 +9,6 @@
 .btn {
   display: flex;
   margin-right: 20px;
-  & .bi-chevron-down, .bi-chevron-up {
-    color: white;
-  }
   & .bi-chevron-up {
     display: none;
   }
@@ -71,4 +68,8 @@
 #ustensils-list{
   display: none;
   background-color: $colorUstensils;
+}
+
+.bi-chevron-up, .bi-chevron-down {
+  align-self: center;
 }

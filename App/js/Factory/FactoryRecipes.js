@@ -19,8 +19,8 @@ function recipesFactory(data) {
 
         const locCardHeader = document.createElement("div");
         locCardHeader.setAttribute("class", "card-head");
-        const locCardTimeIcon = document.createElement("i");
-        locCardTimeIcon.setAttribute("class", "bi bi-clock");
+        const locCardTimeIcon = document.createElement("img");
+        locCardTimeIcon.setAttribute("src", "App/Images/clock.svg");
         const locCardTimeNumber = document.createElement("span");
         locCardTimeNumber.textContent = time + " min";
 

@@ -1,10 +1,10 @@
 .card-head {
   display: flex;
   margin-bottom: 20px;
-  & i {
+  & img {
     position: absolute;
     right: 90px;
-    font-size: $fontSizeCardHeader;
+    padding: 5px;
   }
   & span {
     position: absolute;
