@@ -29,7 +29,7 @@ function research(parEntry) {
 
     });
 
-    if(recipedSorted.size === 0) {
+    if(recipedSorted.length === 0) {
         return noResult();
     } else {
         return displayRecipesDetails(recipedSorted);
