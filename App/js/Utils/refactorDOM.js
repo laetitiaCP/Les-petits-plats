@@ -22,8 +22,9 @@ function updateAllInputs(parFirstSet, parFirstElement, parSecondSet, parSecondEl
 
 function searchBrotherDom(parStartingElement) {
     let locParentElement = parStartingElement.parentElement;
-    let locChildren = locParentElement.children;
-    let locChildInput = locChildren[0];
+    let locChildrenParent = locParentElement.children;
+    let locChildrenChildrenParent = locChildrenParent[0].children;
+    let locChildInput = locChildrenChildrenParent[0];
 
     return locChildInput;
 }

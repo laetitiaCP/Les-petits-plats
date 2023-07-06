@@ -1,8 +1,9 @@
 function buttonOnclickListOpened(parElementToListen, parElementIcon, parElementToDisplay, parIndex) {
-    let locElementToDisplayChild = searchBrotherDom(parElementToDisplay)
-    let locParentParElementToListen = parElementToListen.parentElement;
 
     parElementToListen.addEventListener("click", function () {
+        let locElementToDisplayChild = searchBrotherDom(parElementToDisplay)
+        let locParentParElementToListen = parElementToListen.parentElement;
+
         if (parElementToDisplay.style.display !== "flex") {
             parElementToListen.style.display = "none";
             parElementToDisplay.style.display = "flex";

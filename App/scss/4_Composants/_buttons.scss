@@ -6,14 +6,20 @@
 
     & form {
       display: flex;
-      flex-direction: row;
-      & input {
-        width: 203px;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+      flex-direction: column;
+      position: relative;
+      & div {
+        display: flex;
+        flex-direction: row;
+        & input {
+          width: 203px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
         }
-      & input::placeholder {
-        color: white;
+
+        & input::placeholder {
+          color: white;
+        }
       }
     }
   }
@@ -61,13 +67,12 @@
 .tags-list {
   position: absolute;
   list-style-type: none;
-  display: flex;
   overflow: auto;
   flex-wrap: wrap;
   z-index: 1;
   max-height: 397px;
   width: 667px;
-  top: 268px;
+  top: 38px;
 }
 
 .list-options-ingredients, .list-options-appliances, .list-options-ustensils {

@@ -23,9 +23,7 @@ function addFilterTags(parElement){
     }
 
     locTag.appendChild(locCrossIcon);
-
     _filterTags.appendChild(locTag);
-
     searchWithAddedTags();
 }
 
